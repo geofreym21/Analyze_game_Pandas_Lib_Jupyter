@@ -52,7 +52,6 @@ Average Purchase Total per Person by Age Group
 Top Spenders
 
 ## Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
-SN
 
 Purchase Count
 
