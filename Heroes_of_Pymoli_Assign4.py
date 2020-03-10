@@ -3,14 +3,12 @@
 
 # In[1]:
 
-
 # Depedencies and Setup
 import pandas as pd
 import numpy as np
 
 
 # In[2]:
-
 
 # File to Load 
 file_to_load = "..\Assignment\purchase_data.csv"
@@ -22,7 +20,6 @@ purchase_data.head()
 
 # In[3]:
 
-
 # Assign the unique players
 unique_players = purchase_data["SN"].unique
 # Display the unique players
@@ -31,14 +28,12 @@ unique_players
 
 # In[4]:
 
-
 # count the number of unique players
 number_of_unique_players = len(purchase_data["SN"].unique())
 number_of_unique_players
 
 
 # In[5]:
-
 
 # create a data frame in order to show the total players
 total_df = pd.DataFrame({"Total Players": [number_of_unique_players]})
@@ -47,7 +42,6 @@ total_df
 
 
 # In[6]:
-
 
 # compute number of unique items, average price, number of purchases and total revenue
 # number of unique items
@@ -65,7 +59,6 @@ total_revenue = sum(purchase_data["Price"])
 
 # In[7]:
 
-
 # Data Frame for purchasing analysis information
 purchasing_df = pd.DataFrame({"Number of Unique Items":[unique_items], "Average Price":[ave_price], "Number of Purchases":[num_of_purchases],"Total Revenue":[total_revenue]})
 purchasing_df["Number of Unique Items"] = purchasing_df["Number of Unique Items"].map("{:<}".format)
@@ -77,7 +70,6 @@ purchasing_df
 
 # In[20]:
 
-
 # Gender Demographics
 # Drop the duplicates in column SN
 gender_group = purchase_data.drop_duplicates('SN')
@@ -87,14 +79,12 @@ gender_count = gender_group["Gender"].value_counts
 
 # In[9]:
 
-
 # gender count to data frame
 gender_df = pd.DataFrame(gender_count())
 #gender_df
 
 
 # In[10]:
-
 
 # get the percentage per gender and add to the gender Count
 # rename the column Gender to Total Count
